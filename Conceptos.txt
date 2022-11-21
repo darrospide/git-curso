@@ -1,0 +1,17 @@
+CURSO DE GITHUB:
+
+- git init: comando para inicializar un proyecto
+- git status: comando para ver qué archivos tenemos trabajando
+- git add: comando para agregar un archivo al staging area
+
+Cuando damos a git init estamos empezando a trabajar en el working directory para 
+luego pasarlo al staging area y luego al repositorio
+
+Crear primer snapshot
+- git commit: comando para crear un primer punto de control del código
+- Usar :wq para salir luego de ponerle un nombre al commit presionando esc
+- git log: comando para ver todos los commits que hemos creado
+
+- git checkout -- "nombre del archivo": comando para revertir los cambios de los archivos
+- git restore: comando para revertir los cambios de los archivos
+- git diff "nombre del archivo": comando para ver las diferencias hechas en los archivos
