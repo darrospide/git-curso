@@ -28,3 +28,4 @@ Crear archivo llamado .gitignore para incluir dentro de el nombre de los element
 
 Para empezar a trabajar con GitHub
 - git remote add origin https://github.com/darrospide/git-curso.git
+- git push -u origin master
