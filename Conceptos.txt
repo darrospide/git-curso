@@ -3,6 +3,7 @@ CURSO DE GITHUB:
 - git init: comando para inicializar un proyecto
 - git status: comando para ver qué archivos tenemos trabajando
 - git add: comando para agregar un archivo al staging area
+- git add .: comando para agregar todos los archivos
 Cuando el archivo se ve en verde es porque ya está en mi entorno de trabajo
 
 Cuando damos a git init estamos empezando a trabajar en el working directory para 
@@ -19,4 +20,8 @@ Crear primer snapshot
 - git diff "nombre del archivo": comando para ver las diferencias hechas en los archivos
 
 Crear archivo llamado .gitignore para incluir dentro de el nombre de los elementos a ignorar
-- ggg
+
+- git commit -m "comentario sobre commit"
+- git branch: comando para ver las ramas, para tener version alternativa del codigo
+- git branch nombreBranch: comando para crear version alternativa del codigo
+- git checkout nombreBranch: comando para cambiar de rama
