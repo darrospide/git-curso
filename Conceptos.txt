@@ -25,3 +25,6 @@ Crear archivo llamado .gitignore para incluir dentro de el nombre de los element
 - git branch: comando para ver las ramas, para tener version alternativa del codigo
 - git branch nombreBranch: comando para crear version alternativa del codigo
 - git checkout nombreBranch: comando para cambiar de rama
+
+Para empezar a trabajar con GitHub
+- git remote add origin https://github.com/darrospide/git-curso.git
