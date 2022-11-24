@@ -1,31 +1,71 @@
-CURSO DE GITHUB:
+CURSO DE GITHUB
 
-- git init: comando para inicializar un proyecto
-- git status: comando para ver qué archivos tenemos trabajando
-- git add: comando para agregar un archivo al staging area
-- git add .: comando para agregar todos los archivos
-Cuando el archivo se ve en verde es porque ya está en mi entorno de trabajo
+COMANDOS BÁSICOS:
+- Ctrl + L: limpiar pantalla
+- ls: lista los directorios
+- ls -a: lista los directorios ocultos
+- pwd: para saber en que directorio nos encontramos
+- tab: para completar el nombre de una dirección
+- cd ..: para salir del directorio
+- mkdir: crear nuevo directorio (reemplaza al crear carpeta manual)
+- mv nombreArchivo nuevoNombreArchivo: comando para cambiar nombre del archivo en el 2do argumento
+  Cuando cambiamos el nombre de un archivo este se elimina y se crea uno nuevo, ambos hay que agregarlos
+- git mv nombreArchivo nuevoNombreArchivo: comando para renombrar y agregar inmediatamente a stage los cambios.
+- cat nombreArchivo.txt: comando para mostrar el contenido del archivo
 
 Cuando damos a git init estamos empezando a trabajar en el working directory para 
 luego pasarlo al staging area y luego al repositorio
 
-Crear primer snapshot
+COMANDOS GIT
+- git init: comando para inicializar un proyecto, se crea directorio .git oculto
+- code .: comando para abrir la carpeta creada en el editor de codigo seleccionado
+- git status: comando para ver qué archivos tenemos trabajando, estado de nuestros archivos
+- git status -s: comando para ver el status de manera más simplificada, M de modificado, A de agregado, cuando están verde están listos para commit
+- git add: comando para agregar un archivo al staging area, usar espacio para agregar varios archivos
+- git add .: comando para agregar todos los archivos
+- rm nombreDelArchivo: comando para eliminar un archivo del stage
+- git rm nombreDelArchivo: comando para elminar un archivo y poder comitear de frente
+
+Si ya agregamos el archivo al stage y comiteamos, debemos usar rm, añadir el archivo y comitear de nuevo para quitarlo
+Cuando el archivo se ve en verde es porque ya está en mi entorno de trabajo 
+
+CREAR PRIMER COMMIT
+
 - git commit: comando para crear un primer punto de control del código
+- git commit -m "comentario sobre commit": comando más rápido para commitear
 - Usar letra i para empezar a escribir
 - Usar :wq para salir luego de ponerle un nombre al commit presionando esc
 - git log: comando para ver todos los commits que hemos creado
+- git log --oneline: comando para mostrar también el historial, pero más reducido
 
-- git checkout -- "nombre del archivo": comando para revertir los cambios de los archivos
+- git checkout -- nombreDelArchivo: comando para revertir los cambios de los archivos
 - git restore: comando para revertir los cambios de los archivos
-- git diff "nombre del archivo": comando para ver las diferencias hechas en los archivos
+- git restore --staged: comando para sacar algún cambio que hayamos pasado a la etapa de stage
+- git diff nombreDelArchivo: comando para ver las diferencias hechas en los archivos, muestra cambios escritos, pero que no se han pasado a staged
+- git diff --staged: cambios que se encuentran en la etapa staged
+Chekout y restore solo funcionan solamente cuando el archivo está en el working directory, no en el stage
 
-Crear archivo llamado .gitignore para incluir dentro de el nombre de los elementos a ignorar
+.GITIGNORE
+- Crear archivo llamado .gitignore para incluir dentro de el nombre de los elementos a ignorar
 
-- git commit -m "comentario sobre commit"
+RAMAS
 - git branch: comando para ver las ramas, para tener version alternativa del codigo
 - git branch nombreBranch: comando para crear version alternativa del codigo
+- git checkout -b nombreBranch: comando para crear nueva rama e inmediatamente cambiar a esa rama
 - git checkout nombreBranch: comando para cambiar de rama
 
+Para traer cambios de la rama secundaria a la rama principal. En rama principal
+- git merge nombreRamaSecundaria: comando para traer cambios de la rama secundaria a la principal
+
+CONEXIÓN CON GITHUB
 Para empezar a trabajar con GitHub
 - git remote add origin https://github.com/darrospide/git-curso.git
-- git push -u origin master
+- $ git remote set-url origin https://git-repo/new-repository.git: cambiar repositorio
+- git push -u origin main: comando para subir nuestros cambios respecto a la rama que estamos trabajando.
+  como la rama de main no se encuentra creada en nuestro repositorio en github se usa la opcion -u (crear rama) origin (donde va a ser creada)
+
+CLONAR REPOSITORIO
+Para clonar
+- git clone https://github.com/darrospide/git-curso.git
+
+FINAL
